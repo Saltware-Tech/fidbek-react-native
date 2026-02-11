@@ -2,17 +2,14 @@
 
 Fidbek SDK bridge for React Native with TurboModule (New Architecture / JSI).
 
-## Features
+## Architecture Support
 
-- React Native CLI support
-- Expo support (development builds via `expo prebuild` / `expo run`)
-- New Architecture only (TurboModule/JSI)
-- API parity with native and Flutter wrappers:
-  - `configure({ token, shakeToOpenEnabled })`
-  - `open()`
-  - `shutdown()`
+- Supported: React Native New Architecture (`newArchEnabled=true`)
+- Not supported: Old Architecture (legacy bridge)
 
-## Install
+## React Native CLI Setup
+
+1. Install package:
 
 ```bash
 npm install @saltware/fidbek-react-native
@@ -20,136 +17,25 @@ npm install @saltware/fidbek-react-native
 yarn add @saltware/fidbek-react-native
 ```
 
-## Local Development (Package Path)
-
-If your app uses a local package path (for example `file:../fidbek-react-native`), keep the import as:
-
-```ts
-import Fidbek from '@saltware/fidbek-react-native';
-```
-
-Do not import by file-system path in app code.
-
-### React Native CLI local setup
-
-1. Install from local path in your app `package.json`:
-
-```json
-{
-  "dependencies": {
-    "@saltware/fidbek-react-native": "file:../fidbek-react-native"
-  }
-}
-```
-
-2. Add Metro config (`metro.config.js`) so symlinked package resolution works:
-
-```js
-const path = require('path');
-const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
-
-const projectRoot = __dirname;
-const packageRoot = path.resolve(projectRoot, '../fidbek-react-native');
-
-const config = {
-  watchFolders: [packageRoot],
-  resolver: {
-    unstable_enableSymlinks: true,
-    nodeModulesPaths: [path.resolve(projectRoot, 'node_modules')],
-    extraNodeModules: {
-      '@saltware/fidbek-react-native': packageRoot,
-    },
-  },
-};
-
-module.exports = mergeConfig(getDefaultConfig(projectRoot), config);
-```
-
-3. If iOS build fails on `[CP] Embed Pods Frameworks` with symlink/codesign errors, patch your `ios/Podfile` `post_install` to replace `--links` with `--copy-links` in `Pods-<App>-frameworks.sh`:
-
-```rb
-post_install do |installer|
-  react_native_post_install(installer, config[:reactNativePath], :mac_catalyst_enabled => false)
-
-  frameworks_script_path = File.join(
-    installer.sandbox.root,
-    'Target Support Files',
-    'Pods-YourAppName',
-    'Pods-YourAppName-frameworks.sh'
-  )
-
-  if File.exist?(frameworks_script_path)
-    content = File.read(frameworks_script_path)
-    patched = content.gsub('--links --filter "- CVS/"', '--copy-links --filter "- CVS/"')
-    File.write(frameworks_script_path, patched) if patched != content
-  end
-end
-```
-
-### Expo local setup
-
-1. Install from local path in your Expo app:
-
-```json
-{
-  "dependencies": {
-    "@saltware/fidbek-react-native": "file:../fidbek-react-native"
-  }
-}
-```
-
-2. Add Metro config (`metro.config.js`) for local package resolution:
-
-```js
-const path = require('path');
-const { getDefaultConfig } = require('expo/metro-config');
-
-const projectRoot = __dirname;
-const packageRoot = path.resolve(projectRoot, '../fidbek-react-native');
-
-const config = getDefaultConfig(projectRoot);
-
-config.watchFolders = [packageRoot];
-config.resolver.unstable_enableSymlinks = true;
-config.resolver.nodeModulesPaths = [path.resolve(projectRoot, 'node_modules')];
-config.resolver.extraNodeModules = {
-  ...(config.resolver.extraNodeModules || {}),
-  '@saltware/fidbek-react-native': packageRoot,
-};
-
-module.exports = config;
-```
-
-## Architecture Support
-
-- Supported: React Native New Architecture (`newArchEnabled=true`)
-- Not supported: Old Architecture (legacy bridge)
-
-## React Native CLI
-
-### iOS
+2. Install iOS pods:
 
 ```bash
 cd ios && pod install
 ```
 
-### Android
+3. Android has no extra manual step after autolinking.
 
-No manual step is required after autolinking.
+## Expo Setup
 
-## Expo
-
-This package contains custom native code. Use an Expo development build:
+1. Install package:
 
 ```bash
-npx expo prebuild
-npx expo run:ios
-npx expo run:android
+npm install @saltware/fidbek-react-native
+# or
+yarn add @saltware/fidbek-react-native
 ```
 
-`Expo Go` is not supported because the module includes native binaries.
-
-Optional `app.json` plugin entry:
+2. (Optional) Add plugin in `app.json`:
 
 ```json
 {
@@ -159,23 +45,13 @@ Optional `app.json` plugin entry:
 }
 ```
 
-## Usage
+3. Create a development build:
 
-```ts
-import Fidbek from '@saltware/fidbek-react-native';
 
-await Fidbek.configure({
-  token: 'YOUR_PUBLIC_TOKEN',
-  shakeToOpenEnabled: true,
-});
-
-await Fidbek.open();
-
-await Fidbek.shutdown();
+```bash
+npx expo prebuild
+npx expo run:ios
+npx expo run:android
 ```
 
-## Requirements
-
-- iOS 13+
-- Android minSdk 24+
-- React Native 0.75+ with New Architecture enabled
+`Expo Go` is not supported because the module includes native binaries.
