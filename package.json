@@ -1,5 +1,5 @@
 {
-  "name": "@fidbek/react-native",
+  "name": "@saltware/fidbek-react-native",
   "version": "0.1.0",
   "description": "React Native TurboModule bridge for Fidbek mobile SDK (New Architecture only)",
   "main": "src/index.js",
@@ -30,7 +30,7 @@
   "homepage": "https://fidbek.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fidbek/fidbek-react-native"
+    "url": "https://github.com/Saltware-Tech/fidbek-react-native.git"
   },
   "peerDependencies": {
     "expo": ">=51.0.0",

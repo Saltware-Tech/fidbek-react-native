@@ -8,7 +8,7 @@
 #endif
 
 #ifndef RCT_NEW_ARCH_ENABLED
-#error "@fidbek/react-native requires React Native New Architecture (TurboModules)."
+#error "@saltware/fidbek-react-native requires React Native New Architecture (TurboModules)."
 #endif
 
 @implementation FidbekReactNative

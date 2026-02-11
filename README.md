@@ -1,4 +1,4 @@
-# @fidbek/react-native
+# @saltware/fidbek-react-native
 
 Fidbek SDK bridge for React Native with TurboModule (New Architecture / JSI).
 
@@ -15,9 +15,9 @@ Fidbek SDK bridge for React Native with TurboModule (New Architecture / JSI).
 ## Install
 
 ```bash
-npm install @fidbek/react-native
+npm install @saltware/fidbek-react-native
 # or
-yarn add @fidbek/react-native
+yarn add @saltware/fidbek-react-native
 ```
 
 ## Local Development (Package Path)
@@ -25,7 +25,7 @@ yarn add @fidbek/react-native
 If your app uses a local package path (for example `file:../fidbek-react-native`), keep the import as:
 
 ```ts
-import Fidbek from '@fidbek/react-native';
+import Fidbek from '@saltware/fidbek-react-native';
 ```
 
 Do not import by file-system path in app code.
@@ -37,7 +37,7 @@ Do not import by file-system path in app code.
 ```json
 {
   "dependencies": {
-    "@fidbek/react-native": "file:../fidbek-react-native"
+    "@saltware/fidbek-react-native": "file:../fidbek-react-native"
   }
 }
 ```
@@ -57,7 +57,7 @@ const config = {
     unstable_enableSymlinks: true,
     nodeModulesPaths: [path.resolve(projectRoot, 'node_modules')],
     extraNodeModules: {
-      '@fidbek/react-native': packageRoot,
+      '@saltware/fidbek-react-native': packageRoot,
     },
   },
 };
@@ -93,7 +93,7 @@ end
 ```json
 {
   "dependencies": {
-    "@fidbek/react-native": "file:../fidbek-react-native"
+    "@saltware/fidbek-react-native": "file:../fidbek-react-native"
   }
 }
 ```
@@ -114,7 +114,7 @@ config.resolver.unstable_enableSymlinks = true;
 config.resolver.nodeModulesPaths = [path.resolve(projectRoot, 'node_modules')];
 config.resolver.extraNodeModules = {
   ...(config.resolver.extraNodeModules || {}),
-  '@fidbek/react-native': packageRoot,
+  '@saltware/fidbek-react-native': packageRoot,
 };
 
 module.exports = config;
@@ -154,7 +154,7 @@ Optional `app.json` plugin entry:
 ```json
 {
   "expo": {
-    "plugins": ["@fidbek/react-native"]
+    "plugins": ["@saltware/fidbek-react-native"]
   }
 }
 ```
@@ -162,7 +162,7 @@ Optional `app.json` plugin entry:
 ## Usage
 
 ```ts
-import Fidbek from '@fidbek/react-native';
+import Fidbek from '@saltware/fidbek-react-native';
 
 await Fidbek.configure({
   token: 'YOUR_PUBLIC_TOKEN',

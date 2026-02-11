@@ -27,7 +27,7 @@
       "package": "com.talhasalt.expoapp"
     },
     "plugins": [
-      "@fidbek/react-native"
+      "@saltware/fidbek-react-native"
     ],
     "web": {
       "favicon": "./assets/favicon.png"

@@ -21,7 +21,7 @@ def isNewArchitectureEnabled() {
 
 if (!isNewArchitectureEnabled()) {
   throw new GradleException(
-    "@fidbek/react-native requires React Native New Architecture. " +
+    "@saltware/fidbek-react-native requires React Native New Architecture. " +
       "Set newArchEnabled=true in android/gradle.properties."
   )
 }

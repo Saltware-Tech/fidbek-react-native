@@ -11,7 +11,7 @@ config.resolver.unstable_enableSymlinks = true;
 config.resolver.nodeModulesPaths = [path.resolve(projectRoot, 'node_modules')];
 config.resolver.extraNodeModules = {
   ...(config.resolver.extraNodeModules || {}),
-  '@fidbek/react-native': packageRoot,
+  '@saltware/fidbek-react-native': packageRoot,
 };
 
 module.exports = config;

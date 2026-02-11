@@ -9,7 +9,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import Fidbek from '@fidbek/react-native';
+import Fidbek from '@saltware/fidbek-react-native';
 
 export default function App() {
   const [token, setToken] = useState('YOUR_PUBLIC_TOKEN');
