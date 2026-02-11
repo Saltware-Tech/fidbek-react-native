@@ -14,8 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.talhasalt.expoapp",
-      "appleTeamId": "3HTHQBV2F8"
+      "bundleIdentifier": "com.talhasalt.expoapp"
     },
     "android": {
       "adaptiveIcon": {
