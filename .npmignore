@@ -1,0 +1,7 @@
+android/build
+android/.cxx
+android/.gradle
+ios/build
+ios/Pods
+examples
+.DS_Store

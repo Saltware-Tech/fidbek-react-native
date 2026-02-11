@@ -1,0 +1,26 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name FidbekSDK -package-name source_ios
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+import CoreMotion
+import Foundation
+import PencilKit
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+@_hasMissingDesignatedInitializers final public class Fidbek {
+  public static let shared: FidbekSDK.Fidbek
+  final public func configure(_ configuration: FidbekSDK.FidbekConfiguration)
+  final public func configure(token: Swift.String, shakeToOpenEnabled: Swift.Bool = true)
+  final public func present()
+  final public func stop()
+  @objc deinit
+}
+public struct FidbekConfiguration {
+  public let token: Swift.String
+  public let shakeToOpenEnabled: Swift.Bool
+  public init(token: Swift.String, shakeToOpenEnabled: Swift.Bool = true)
+}

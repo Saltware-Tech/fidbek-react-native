@@ -1,0 +1,805 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "FidbekSDK",
+    "printedName": "FidbekSDK",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Fidbek",
+        "printedName": "Fidbek",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Fidbek",
+                "printedName": "FidbekSDK.Fidbek",
+                "usr": "s:9FidbekSDK0A0C"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9FidbekSDK0A0C6sharedACvpZ",
+            "mangledName": "$s9FidbekSDK0A0C6sharedACvpZ",
+            "moduleName": "FidbekSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Fidbek",
+                    "printedName": "FidbekSDK.Fidbek",
+                    "usr": "s:9FidbekSDK0A0C"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9FidbekSDK0A0C6sharedACvgZ",
+                "mangledName": "$s9FidbekSDK0A0C6sharedACvgZ",
+                "moduleName": "FidbekSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FidbekConfiguration",
+                "printedName": "FidbekSDK.FidbekConfiguration",
+                "usr": "s:9FidbekSDK0A13ConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9FidbekSDK0A0C9configureyyAA0A13ConfigurationVF",
+            "mangledName": "$s9FidbekSDK0A0C9configureyyAA0A13ConfigurationVF",
+            "moduleName": "FidbekSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure(token:shakeToOpenEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9FidbekSDK0A0C9configure5token18shakeToOpenEnabledySS_SbtF",
+            "mangledName": "$s9FidbekSDK0A0C9configure5token18shakeToOpenEnabledySS_SbtF",
+            "moduleName": "FidbekSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9FidbekSDK0A0C7presentyyF",
+            "mangledName": "$s9FidbekSDK0A0C7presentyyF",
+            "moduleName": "FidbekSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9FidbekSDK0A0C4stopyyF",
+            "mangledName": "$s9FidbekSDK0A0C4stopyyF",
+            "moduleName": "FidbekSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9FidbekSDK0A0C",
+        "mangledName": "$s9FidbekSDK0A0C",
+        "moduleName": "FidbekSDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FidbekConfiguration",
+        "printedName": "FidbekConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "token",
+            "printedName": "token",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9FidbekSDK0A13ConfigurationV5tokenSSvp",
+            "mangledName": "$s9FidbekSDK0A13ConfigurationV5tokenSSvp",
+            "moduleName": "FidbekSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9FidbekSDK0A13ConfigurationV5tokenSSvg",
+                "mangledName": "$s9FidbekSDK0A13ConfigurationV5tokenSSvg",
+                "moduleName": "FidbekSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shakeToOpenEnabled",
+            "printedName": "shakeToOpenEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9FidbekSDK0A13ConfigurationV18shakeToOpenEnabledSbvp",
+            "mangledName": "$s9FidbekSDK0A13ConfigurationV18shakeToOpenEnabledSbvp",
+            "moduleName": "FidbekSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9FidbekSDK0A13ConfigurationV18shakeToOpenEnabledSbvg",
+                "mangledName": "$s9FidbekSDK0A13ConfigurationV18shakeToOpenEnabledSbvg",
+                "moduleName": "FidbekSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(token:shakeToOpenEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FidbekConfiguration",
+                "printedName": "FidbekSDK.FidbekConfiguration",
+                "usr": "s:9FidbekSDK0A13ConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9FidbekSDK0A13ConfigurationV5token18shakeToOpenEnabledACSS_Sbtcfc",
+            "mangledName": "$s9FidbekSDK0A13ConfigurationV5token18shakeToOpenEnabledACSS_Sbtcfc",
+            "moduleName": "FidbekSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9FidbekSDK0A13ConfigurationV",
+        "mangledName": "$s9FidbekSDK0A13ConfigurationV",
+        "moduleName": "FidbekSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "PencilKit",
+        "printedName": "PencilKit",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMotion",
+        "printedName": "CoreMotion",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "FidbekSDK"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Fidbek.swift",
+      "kind": "StringLiteral",
+      "offset": 135,
+      "length": 16,
+      "value": "\"com.fidbek.sdk\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Fidbek.swift",
+      "kind": "StringLiteral",
+      "offset": 163,
+      "length": 8,
+      "value": "\"Fidbek\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Fidbek.swift",
+      "kind": "BooleanLiteral",
+      "offset": 349,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Fidbek.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1036,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/FidbekConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 200,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Device\/DeviceInfoProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 435,
+      "length": 9,
+      "value": "\"os_name\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Device\/DeviceInfoProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 470,
+      "length": 12,
+      "value": "\"os_version\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Device\/DeviceInfoProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 527,
+      "length": 11,
+      "value": "\"time_zone\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Device\/DeviceInfoProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 566,
+      "length": 14,
+      "value": "\"screen_width\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Device\/DeviceInfoProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 609,
+      "length": 15,
+      "value": "\"screen_height\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Device\/DeviceInfoProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 655,
+      "length": 17,
+      "value": "\"interface_style\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Device\/DeviceInfoProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 708,
+      "length": 23,
+      "value": "\"identifier_for_vendor\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Device\/DeviceInfoProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 906,
+      "length": 11,
+      "value": "\"bundle_id\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Model\/FeedbackReportPayload.swift",
+      "kind": "StringLiteral",
+      "offset": 461,
+      "length": 19,
+      "value": "\"screenshot_base64\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Model\/FeedbackReportPayload.swift",
+      "kind": "StringLiteral",
+      "offset": 544,
+      "length": 13,
+      "value": "\"occurred_at\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Network\/ReportClient.swift",
+      "kind": "StringLiteral",
+      "offset": 498,
+      "length": 39,
+      "value": "\"https:\/\/api.fidbek.dev\/v1\/sdk\/reports\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 507,
+      "length": 4,
+      "value": "0.14"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 520,
+      "length": 4,
+      "value": "0.15"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 532,
+      "length": 4,
+      "value": "0.18"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 545,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 693,
+      "length": 4,
+      "value": "0.20"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 706,
+      "length": 4,
+      "value": "0.22"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 718,
+      "length": 4,
+      "value": "0.26"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 731,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 904,
+      "length": 4,
+      "value": "0.14"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 957,
+      "length": 4,
+      "value": "0.08"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1111,
+      "length": 4,
+      "value": "0.10"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1164,
+      "length": 4,
+      "value": "0.06"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/CategoryDialogViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1331,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 81,
+      "length": 4,
+      "value": "0.12"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 94,
+      "length": 4,
+      "value": "0.13"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 106,
+      "length": 4,
+      "value": "0.15"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 119,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 162,
+      "length": 4,
+      "value": "0.14"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 175,
+      "length": 4,
+      "value": "0.15"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 187,
+      "length": 4,
+      "value": "0.17"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 200,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 265,
+      "length": 4,
+      "value": "0.12"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 378,
+      "length": 4,
+      "value": "0.55"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 430,
+      "length": 4,
+      "value": "0.16"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 443,
+      "length": 4,
+      "value": "0.17"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 455,
+      "length": 4,
+      "value": "0.20"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 468,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/FeedbackViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1559,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/ScreenshotCapturer.swift",
+      "kind": "FloatLiteral",
+      "offset": 705,
+      "length": 4,
+      "value": "0.72"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/ShakeDetector.swift",
+      "kind": "StringLiteral",
+      "offset": 118,
+      "length": 16,
+      "value": "\"com.fidbek.sdk\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/ShakeDetector.swift",
+      "kind": "StringLiteral",
+      "offset": 146,
+      "length": 15,
+      "value": "\"ShakeDetector\""
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/ShakeDetector.swift",
+      "kind": "FloatLiteral",
+      "offset": 497,
+      "length": 4,
+      "value": "1.35"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/ShakeDetector.swift",
+      "kind": "FloatLiteral",
+      "offset": 543,
+      "length": 3,
+      "value": "1.2"
+    },
+    {
+      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/UI\/ShakeDetector.swift",
+      "kind": "BooleanLiteral",
+      "offset": 575,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

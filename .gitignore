@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+examples/**/node_modules/
+
+# Build artifacts
+android/build/
+android/.gradle/
+android/.cxx/
+ios/build/
+ios/Pods/
+examples/**/android/.gradle/
+examples/**/android/build/
+examples/**/android/app/build/
+examples/**/ios/Pods/
+examples/**/ios/build/
+examples/**/.expo/
+examples/**/.bundle/
+
+# Xcode/Android Studio user data
+*.xcuserstate
+**/*.xcworkspace/xcuserdata/
+**/*.xcodeproj/xcuserdata/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store

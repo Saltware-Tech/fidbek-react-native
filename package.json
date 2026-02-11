@@ -1,0 +1,53 @@
+{
+  "name": "@fidbek/react-native",
+  "version": "0.1.0",
+  "description": "React Native TurboModule bridge for Fidbek mobile SDK (New Architecture only)",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "react-native": "src/index.js",
+  "source": "src/index.js",
+  "files": [
+    "src",
+    "android/build.gradle",
+    "android/libs",
+    "android/src",
+    "ios/FidbekReactNative.h",
+    "ios/FidbekReactNative.mm",
+    "ios/FidbekReactNativeBridge.swift",
+    "ios/FidbekSDK.xcframework",
+    "fidbek-react-native.podspec",
+    "react-native.config.js",
+    "app.plugin.js"
+  ],
+  "keywords": [
+    "fidbek",
+    "react-native",
+    "expo",
+    "turbomodule",
+    "jsi"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://fidbek.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fidbek/fidbek-react-native"
+  },
+  "peerDependencies": {
+    "expo": ">=51.0.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.75.0"
+  },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    }
+  },
+  "codegenConfig": {
+    "name": "RNFidbekReactNativeSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.fidbek.reactnative"
+    }
+  }
+}

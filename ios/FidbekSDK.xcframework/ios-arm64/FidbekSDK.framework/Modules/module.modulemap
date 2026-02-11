@@ -1,0 +1,4 @@
+module FidbekSDK {
+header "FidbekSDK-Swift.h"
+export *
+}
