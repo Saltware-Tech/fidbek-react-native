@@ -30,7 +30,7 @@
   "homepage": "https://fidbek.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Saltware-Tech/fidbek-react-native.git"
+    "url": "git+https://github.com/Saltware-Tech/fidbek-react-native.git"
   },
   "peerDependencies": {
     "expo": ">=51.0.0",
