@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect, useMemo, useState } from 'react';
 import {
   Alert,
+  InteractionManager,
   Pressable,
   SafeAreaView,
   StyleSheet,
@@ -11,6 +12,7 @@ import {
 import Fidbek from '@saltware/fidbek-react-native';
 
 const PUBLIC_TOKEN = 'YOUR_PUBLIC_TOKEN';
+const OPEN_DELAY_MS = 350;
 
 export default function App() {
   const [configured, setConfigured] = useState(false);
@@ -49,6 +51,12 @@ export default function App() {
       if (!configured) {
         throw new Error('Configure is not ready yet.');
       }
+      await new Promise<void>((resolve) => {
+        InteractionManager.runAfterInteractions(() => resolve());
+      });
+      await new Promise<void>((resolve) => {
+        setTimeout(() => resolve(), OPEN_DELAY_MS);
+      });
       await Fidbek.open();
     });
   };
