@@ -108,7 +108,7 @@ npx react-native start --reset-cache
 
 ### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
 
-Use `@saltware/fidbek-react-native@0.1.2+` and clean build:
+Use `@saltware/fidbek-react-native@0.1.3+` and clean build:
 
 ```bash
 cd android
@@ -120,3 +120,10 @@ npx react-native run-android
 ### Runtime: `Tried to show an alert while not attached to an Activity`
 
 Call `open()` after app is foreground/resumed and after initial render cycle.
+
+## Release Notes
+
+### 0.1.3
+
+- Refreshed bundled native artifacts (Android AAR + iOS XCFramework).
+- Restored automatic screenshot capture in native feedback open flow.
