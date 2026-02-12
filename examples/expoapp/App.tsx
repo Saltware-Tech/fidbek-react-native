@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useMemo, useState } from 'react';
 import {
-  Alert,
   InteractionManager,
   Pressable,
   SafeAreaView,
@@ -29,8 +28,8 @@ export default function App() {
       setStatus(`${label} success`);
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Unknown error';
-      setStatus(`${label} failed`);
-      Alert.alert('Fidbek Error', message);
+      setStatus(`${label} failed: ${message}`);
+      console.warn(`Fidbek ${label} error`, message);
     } finally {
       setBusy(false);
     }
