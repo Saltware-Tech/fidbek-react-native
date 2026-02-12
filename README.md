@@ -1,52 +1,71 @@
 # @saltware/fidbek-react-native
 
-Fidbek SDK bridge for React Native with TurboModule (New Architecture / JSI).
+React Native TurboModule bridge for Fidbek mobile SDK.
 
-## Architecture Support
+## Architecture Policy
 
 - Supported: React Native New Architecture (`newArchEnabled=true`)
+- Supported bridge type: TurboModule / JSI
 - Not supported: Old Architecture (legacy bridge)
 
-## React Native CLI Setup
-
-1. Install package:
+## Install
 
 ```bash
 npm install @saltware/fidbek-react-native
 # or
 yarn add @saltware/fidbek-react-native
+```
+
+## React Native CLI Setup
+
+1. Ensure New Architecture is enabled.
+
+In `android/gradle.properties`:
+
+```properties
+newArchEnabled=true
 ```
 
 2. Install iOS pods:
 
 ```bash
-cd ios && pod install
+cd ios
+pod install
 ```
 
-3. Android has no extra manual step after autolinking.
+3. Run app:
 
-## Expo Setup
+```bash
+npx react-native run-ios
+npx react-native run-android
+```
+
+Notes:
+
+- Android and iOS use autolinking
+- No manual package registration needed
+- No custom Metro config required
+
+## Expo Setup (Development Build)
 
 1. Install package:
 
 ```bash
 npm install @saltware/fidbek-react-native
-# or
-yarn add @saltware/fidbek-react-native
 ```
 
-2. (Optional) Add plugin in `app.json`:
+2. In `app.json`, enable New Architecture. Plugin is optional.
 
 ```json
 {
   "expo": {
+    "newArchEnabled": true,
     "plugins": ["@saltware/fidbek-react-native"]
   }
 }
 ```
 
-3. Create a development build:
-
+3. Build native projects:
 
 ```bash
 npx expo prebuild
@@ -54,4 +73,50 @@ npx expo run:ios
 npx expo run:android
 ```
 
-`Expo Go` is not supported because the module includes native binaries.
+Notes:
+
+- Expo Go is not supported (native binaries required)
+- Plugin is currently a no-op; kept optional for forward compatibility
+
+## Usage
+
+```ts
+import Fidbek from '@saltware/fidbek-react-native';
+
+await Fidbek.configure({
+  token: 'YOUR_PUBLIC_TOKEN',
+  shakeToOpenEnabled: true,
+});
+
+await Fidbek.open();
+```
+
+## API
+
+- `configure({ token: string, shakeToOpenEnabled?: boolean }): Promise<void>`
+- `open(): Promise<void>`
+- `shutdown(): Promise<void>`
+
+## Troubleshooting
+
+### `Unable to resolve "@saltware/fidbek-react-native"`
+
+```bash
+npm install
+npx react-native start --reset-cache
+```
+
+### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
+
+Use `@saltware/fidbek-react-native@0.1.2+` and clean build:
+
+```bash
+cd android
+./gradlew clean
+cd ..
+npx react-native run-android
+```
+
+### Runtime: `Tried to show an alert while not attached to an Activity`
+
+Call `open()` after app is foreground/resumed and after initial render cycle.
