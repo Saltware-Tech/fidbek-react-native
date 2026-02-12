@@ -15,7 +15,7 @@ class FidbekReactNativeModule(
     }
 
     override fun open(promise: Promise) {
-        FidbekBridge.open(promise)
+        FidbekBridge.open(reactContext, promise)
     }
 
     override fun shutdown(promise: Promise) {

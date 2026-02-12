@@ -1,5 +1,6 @@
 package com.fidbek.reactnative
 
+import android.app.Activity
 import android.app.Application
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
@@ -24,10 +25,18 @@ internal object FidbekBridge {
         }
 
         Fidbek.initialize(application, token, shakeToOpenEnabled)
+        primeSdkActivityTracker(reactContext.currentActivity)
         promise.resolve(null)
     }
 
-    fun open(promise: Promise) {
+    fun open(reactContext: ReactApplicationContext, promise: Promise) {
+        val currentActivity = reactContext.currentActivity
+        if (currentActivity == null) {
+            promise.reject("ERR_NO_CURRENT_ACTIVITY", "Current activity is unavailable")
+            return
+        }
+
+        primeSdkActivityTracker(currentActivity)
         Fidbek.open()
         promise.resolve(null)
     }
@@ -35,5 +44,22 @@ internal object FidbekBridge {
     fun shutdown(promise: Promise) {
         Fidbek.shutdown()
         promise.resolve(null)
+    }
+
+    private fun primeSdkActivityTracker(activity: Activity?) {
+        if (activity == null) {
+            return
+        }
+
+        try {
+            val trackerField = Fidbek::class.java.getDeclaredField("activityTracker")
+            trackerField.isAccessible = true
+            val tracker = trackerField.get(null) ?: return
+
+            val onResumed = tracker.javaClass.getMethod("onActivityResumed", Activity::class.java)
+            onResumed.invoke(tracker, activity)
+        } catch (_: Throwable) {
+            // Best-effort priming only.
+        }
     }
 }
