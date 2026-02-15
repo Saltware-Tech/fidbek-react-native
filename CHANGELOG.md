@@ -1,3 +1,9 @@
+## 0.1.4
+
+- Refreshed bundled native artifacts (Android AAR + iOS XCFramework).
+- Added native support for multiple media attachments (gallery image/video pick + preview/edit flow).
+- Kept automatic screenshot capture in feedback open flow.
+
 ## 0.1.3
 
 - Refreshed bundled native artifacts (Android AAR + iOS XCFramework).
