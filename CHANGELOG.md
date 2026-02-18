@@ -1,3 +1,8 @@
+## 1.0.5
+
+- Updated bundled native binaries to Fidbek SDK `1.0.5` (Android AAR + iOS XCFramework).
+- Keeps multi-media attachment and compact feedback UI improvements from latest native sources.
+
 ## 0.1.4
 
 - Refreshed bundled native artifacts (Android AAR + iOS XCFramework).

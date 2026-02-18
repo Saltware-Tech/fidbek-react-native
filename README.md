@@ -108,7 +108,7 @@ npx react-native start --reset-cache
 
 ### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
 
-Use `@saltware/fidbek-react-native@0.1.3+` and clean build:
+Use `@saltware/fidbek-react-native@1.0.5+` and clean build:
 
 ```bash
 cd android
@@ -123,7 +123,7 @@ Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
 
-### 0.1.3
+### 1.0.5
 
-- Refreshed bundled native artifacts (Android AAR + iOS XCFramework).
-- Restored automatic screenshot capture in native feedback open flow.
+- Updated bundled native binaries to Fidbek SDK `1.0.5` (Android + iOS).
+- Includes latest native feedback UI/media flow improvements.
