@@ -108,7 +108,7 @@ npx react-native start --reset-cache
 
 ### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
 
-Use `@saltware/fidbek-react-native@0.1.5+` and clean build:
+Use `@saltware/fidbek-react-native@0.2.0+` and clean build:
 
 ```bash
 cd android
@@ -122,6 +122,14 @@ npx react-native run-android
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.2.0
+
+- Updated bundled native binaries to Fidbek SDK `0.2.0` (Android + iOS).
+- Added native issue frequency selector.
+- Added device heartbeat ping queue with improved upload resilience.
+- Token validation now runs at report send time.
+- Includes iOS localization resources for English and Turkish.
 
 ### 0.1.5
 
