@@ -1,6 +1,6 @@
 {
   "name": "@saltware/fidbek-react-native",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React Native TurboModule bridge for Fidbek mobile SDK (New Architecture only)",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -15,7 +15,7 @@
     "ios/FidbekReactNative.mm",
     "ios/FidbekReactNativeBridge.swift",
     "ios/FidbekSDK.xcframework",
-    "ios/FidbekSDKResources.bundle",
+    "ios/FidbekSDK_FidbekSDK.bundle",
     "fidbek-react-native.podspec",
     "react-native.config.js",
     "app.plugin.js"

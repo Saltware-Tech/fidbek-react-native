@@ -1,3 +1,8 @@
+## 0.2.1
+
+- Fixed iOS runtime crash caused by resource bundle name mismatch.
+- iOS localization bundle is now packaged as `FidbekSDK_FidbekSDK.bundle`.
+
 ## 0.2.0
 
 - Updated bundled native binaries to Fidbek SDK `0.2.0` (Android AAR + iOS XCFramework).

@@ -108,7 +108,7 @@ npx react-native start --reset-cache
 
 ### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
 
-Use `@saltware/fidbek-react-native@0.2.0+` and clean build:
+Use `@saltware/fidbek-react-native@0.2.1+` and clean build:
 
 ```bash
 cd android
@@ -122,6 +122,11 @@ npx react-native run-android
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.2.1
+
+- Fixed iOS runtime crash caused by resource bundle name mismatch.
+- iOS localization bundle is now packaged as `FidbekSDK_FidbekSDK.bundle`.
 
 ### 0.2.0
 
