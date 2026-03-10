@@ -121,7 +121,7 @@ npx react-native start --reset-cache
 
 ### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
 
-Use `@saltware/fidbek-react-native@0.3.0+` and clean build:
+Use `@saltware/fidbek-react-native@0.3.1+` and clean build:
 
 ```bash
 cd android
@@ -135,6 +135,12 @@ npx react-native run-android
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.3.1
+
+- Removed stale `CoreMotion` linkage from the iOS podspec.
+- Fixes iOS installs that could fail with `missing required module 'CoreMotion'`.
+- Bundled native SDK artifacts remain on `0.3.0`.
 
 ### 0.3.0
 

@@ -1,3 +1,9 @@
+## 0.3.1
+
+- Removed stale `CoreMotion` linkage from the iOS podspec.
+- Fixes iOS wrapper installations that could fail with `missing required module 'CoreMotion'`.
+- No native binary change in this patch; bundled Fidbek SDK artifacts remain on native `0.3.0`.
+
 ## 0.3.0
 
 - Updated bundled native binaries to Fidbek SDK `0.3.0` (Android AAR + iOS XCFramework).
