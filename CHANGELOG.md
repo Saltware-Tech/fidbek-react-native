@@ -1,3 +1,9 @@
+## 0.3.0
+
+- Updated bundled native binaries to Fidbek SDK `0.3.0` (Android AAR + iOS XCFramework).
+- Added `identify` and `clearIdentity` to the documented wrapper surface.
+- Wrapper API is now explicitly limited to the core 5 methods.
+
 ## 0.2.1
 
 - Fixed iOS runtime crash caused by resource bundle name mismatch.

@@ -2,20 +2,63 @@
 // swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name FidbekSDK -package-name source_ios
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
-import CoreMotion
+import AVFoundation
+import AVKit
 import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import ObjectiveC
 import PencilKit
+import PhotosUI
 import Swift
 import UIKit
+import UniformTypeIdentifiers
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import os
+import ObjectiveC.runtime
 @_hasMissingDesignatedInitializers final public class Fidbek {
   public static let shared: FidbekSDK.Fidbek
   final public func configure(_ configuration: FidbekSDK.FidbekConfiguration)
   final public func configure(token: Swift.String, shakeToOpenEnabled: Swift.Bool = true)
   final public func present()
+  @discardableResult
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func setPendingAttachment(image: UIKit.UIImage, compressionQuality: CoreFoundation.CGFloat = 0.85) -> Swift.Bool
+  @discardableResult
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func addPendingAttachment(image: UIKit.UIImage, compressionQuality: CoreFoundation.CGFloat = 0.85) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func setPendingAttachmentData(_ data: Foundation.Data?, mimeType: Swift.String = "image/jpeg") -> Swift.Bool
+  #endif
+  @discardableResult
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func addPendingAttachmentData(_ data: Foundation.Data, mimeType: Swift.String = "image/jpeg") -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func setPendingAttachmentFile(at fileURL: Foundation.URL, mimeType: Swift.String? = nil) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func addPendingAttachmentFile(at fileURL: Foundation.URL, mimeType: Swift.String? = nil) -> Swift.Bool
+  #endif
+  @discardableResult
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func setPendingAttachmentFiles(_ fileURLs: [Foundation.URL]) -> Swift.Int
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func clearPendingAttachment()
+  @available(*, deprecated, message: "Programmatic attachment staging is deprecated. Prefer the built-in Fidbek attachment flow.")
+  final public func clearPendingAttachments()
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func identify(userId: Swift.String? = nil, name: Swift.String? = nil, email: Swift.String? = nil)
+  #endif
+  final public func clearIdentity()
   final public func stop()
   @objc deinit
 }

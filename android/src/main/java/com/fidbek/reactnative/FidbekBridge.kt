@@ -41,6 +41,21 @@ internal object FidbekBridge {
         promise.resolve(null)
     }
 
+    fun identify(userId: String?, name: String?, email: String?, promise: Promise) {
+        if (userId.isNullOrBlank() && name.isNullOrBlank() && email.isNullOrBlank()) {
+            promise.reject("ERR_INVALID_ARGUMENT", "At least one of userId, name, or email is required")
+            return
+        }
+
+        Fidbek.identify(userId, name, email)
+        promise.resolve(null)
+    }
+
+    fun clearIdentity(promise: Promise) {
+        Fidbek.clearIdentity()
+        promise.resolve(null)
+    }
+
     fun shutdown(promise: Promise) {
         Fidbek.shutdown()
         promise.resolve(null)

@@ -1,6 +1,6 @@
 {
   "name": "@saltware/fidbek-react-native",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "React Native TurboModule bridge for Fidbek mobile SDK (New Architecture only)",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -10,6 +10,7 @@
     "src",
     "android/build.gradle",
     "android/libs",
+    "android/maven",
     "android/src",
     "ios/FidbekReactNative.h",
     "ios/FidbekReactNative.mm",

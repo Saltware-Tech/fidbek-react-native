@@ -88,6 +88,10 @@ await Fidbek.configure({
   shakeToOpenEnabled: true,
 });
 
+await Fidbek.identify({
+  email: 'talha@example.com',
+});
+
 await Fidbek.open();
 ```
 
@@ -95,7 +99,16 @@ await Fidbek.open();
 
 - `configure({ token: string, shakeToOpenEnabled?: boolean }): Promise<void>`
 - `open(): Promise<void>`
+- `identify({ userId?: string | null, name?: string | null, email?: string | null }): Promise<void>`
+- `clearIdentity(): Promise<void>`
 - `shutdown(): Promise<void>`
+
+At least one of `userId`, `name`, or `email` is required for `identify`.
+
+## Surface Policy
+
+- Wrapper surface is intentionally limited to `configure`, `open`, `identify`, `clearIdentity`, and `shutdown`.
+- Native attachment staging helpers are not exposed in React Native.
 
 ## Troubleshooting
 
@@ -108,7 +121,7 @@ npx react-native start --reset-cache
 
 ### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
 
-Use `@saltware/fidbek-react-native@0.2.1+` and clean build:
+Use `@saltware/fidbek-react-native@0.3.0+` and clean build:
 
 ```bash
 cd android
@@ -122,6 +135,12 @@ npx react-native run-android
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.3.0
+
+- Updated bundled native binaries to Fidbek SDK `0.3.0` (Android + iOS).
+- Documented `identify` and `clearIdentity` as part of the supported wrapper surface.
+- Wrapper API is now explicitly limited to the core 5 methods.
 
 ### 0.2.1
 

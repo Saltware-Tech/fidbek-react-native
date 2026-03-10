@@ -18,6 +18,14 @@ class FidbekReactNativeModule(
         FidbekBridge.open(reactContext, promise)
     }
 
+    override fun identify(userId: String?, name: String?, email: String?, promise: Promise) {
+        FidbekBridge.identify(userId, name, email, promise)
+    }
+
+    override fun clearIdentity(promise: Promise) {
+        FidbekBridge.clearIdentity(promise)
+    }
+
     override fun shutdown(promise: Promise) {
         FidbekBridge.shutdown(promise)
     }

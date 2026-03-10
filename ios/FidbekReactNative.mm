@@ -41,6 +41,31 @@ RCT_EXPORT_METHOD(open:(RCTPromiseResolveBlock)resolve
   resolve(nil);
 }
 
+RCT_EXPORT_METHOD(identify:(NSString * _Nullable)userId
+                  name:(NSString * _Nullable)name
+                  email:(NSString * _Nullable)email
+                  resolve:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+{
+  BOOL hasUserId = userId != nil && userId.length > 0;
+  BOOL hasName = name != nil && name.length > 0;
+  BOOL hasEmail = email != nil && email.length > 0;
+  if (!hasUserId && !hasName && !hasEmail) {
+    reject(@"ERR_INVALID_ARGUMENT", @"At least one of userId, name, or email is required", nil);
+    return;
+  }
+
+  [FidbekReactNativeBridge identifyWithUserId:userId name:name email:email];
+  resolve(nil);
+}
+
+RCT_EXPORT_METHOD(clearIdentity:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+{
+  [FidbekReactNativeBridge clearIdentity];
+  resolve(nil);
+}
+
 RCT_EXPORT_METHOD(shutdown:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 {

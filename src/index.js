@@ -22,6 +22,30 @@ export function open() {
   return NativeFidbekReactNative.open();
 }
 
+export async function identify(options) {
+  const userId =
+    typeof options?.userId === 'string' && options.userId.trim().length > 0
+      ? options.userId.trim()
+      : null;
+  const name =
+    typeof options?.name === 'string' && options.name.trim().length > 0
+      ? options.name.trim()
+      : null;
+  const email =
+    typeof options?.email === 'string' && options.email.trim().length > 0
+      ? options.email.trim()
+      : null;
+  if (!userId && !name && !email) {
+    throw new Error('At least one of userId, name, or email is required');
+  }
+
+  return NativeFidbekReactNative.identify(userId, name, email);
+}
+
+export function clearIdentity() {
+  return NativeFidbekReactNative.clearIdentity();
+}
+
 export function shutdown() {
   return NativeFidbekReactNative.shutdown();
 }
@@ -29,6 +53,8 @@ export function shutdown() {
 const Fidbek = {
   configure,
   open,
+  identify,
+  clearIdentity,
   shutdown,
 };
 
