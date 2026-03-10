@@ -1,3 +1,9 @@
+## 0.3.2
+
+- Rebuilt the bundled iOS XCFramework from native source `0.3.2`.
+- Removes stale module metadata from the packaged binary to avoid `missing required module 'CoreMotion'` installs.
+- Android bundled native artifact remains on `0.3.0`.
+
 ## 0.3.1
 
 - Removed stale `CoreMotion` linkage from the iOS podspec.

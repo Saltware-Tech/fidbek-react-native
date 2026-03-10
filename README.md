@@ -121,7 +121,7 @@ npx react-native start --reset-cache
 
 ### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
 
-Use `@saltware/fidbek-react-native@0.3.1+` and clean build:
+Use `@saltware/fidbek-react-native@0.3.2+` and clean build:
 
 ```bash
 cd android
@@ -135,6 +135,12 @@ npx react-native run-android
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.3.2
+
+- Rebuilt the bundled iOS XCFramework from native source `0.3.2`.
+- Removes stale module metadata from the packaged binary to avoid `missing required module 'CoreMotion'` installs.
+- Android bundled native artifact remains on `0.3.0`.
 
 ### 0.3.1
 
