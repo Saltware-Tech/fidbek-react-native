@@ -15,7 +15,9 @@ Pod::Spec.new do |s|
   s.swift_version = "5.9"
   s.static_framework = true
 
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
+  # Keep wrapper sources scoped to bridge files.
+  # Using ios/**/* also matches vendored XCFramework headers and causes duplicate header outputs.
+  s.source_files = "ios/FidbekReactNative.h", "ios/FidbekReactNative.mm", "ios/FidbekReactNativeBridge.swift"
   s.vendored_frameworks = "ios/FidbekSDK.xcframework"
   s.frameworks = ["AVFoundation", "AVKit", "PencilKit", "PhotosUI", "UniformTypeIdentifiers"]
   s.resources = "ios/FidbekSDK_FidbekSDK.bundle"

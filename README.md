@@ -130,11 +130,27 @@ cd ..
 npx react-native run-android
 ```
 
+### iOS build: `Multiple commands produce ... FidbekSDK-Swift.h`
+
+Use `@saltware/fidbek-react-native@0.3.3+` and reinstall pods:
+
+```bash
+npm install @saltware/fidbek-react-native@latest
+cd ios
+pod install
+```
+
 ### Runtime: `Tried to show an alert while not attached to an Activity`
 
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.3.3
+
+- Fixed iOS podspec source glob so XCFramework headers are not compiled as wrapper sources.
+- Resolves `Multiple commands produce .../fidbek_react_native.framework/Headers/FidbekSDK-Swift.h`.
+- No native binary change in this patch.
 
 ### 0.3.2
 

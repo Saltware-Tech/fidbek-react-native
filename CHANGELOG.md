@@ -1,3 +1,9 @@
+## 0.3.3
+
+- Fixed iOS podspec source glob to avoid pulling `FidbekSDK.xcframework` headers into wrapper sources.
+- Resolves CocoaPods/Xcode `Multiple commands produce .../fidbek_react_native.framework/Headers/FidbekSDK-Swift.h`.
+- Bundled native artifacts remain on `0.3.2` (iOS) and `0.3.0` (Android).
+
 ## 0.3.2
 
 - Rebuilt the bundled iOS XCFramework from native source `0.3.2`.
