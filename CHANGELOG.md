@@ -1,3 +1,10 @@
+## 0.3.5
+
+- Updated bundled iOS XCFramework and resources to native Fidbek SDK `0.3.5`.
+- Includes the scripted native packaging pipeline and latest iOS binary rebuild.
+- Keeps the React Native iOS podspec source glob fix from `0.3.3`.
+- Android bundled native artifact remains on `0.3.0`.
+
 ## 0.3.3
 
 - Fixed iOS podspec source glob to avoid pulling `FidbekSDK.xcframework` headers into wrapper sources.

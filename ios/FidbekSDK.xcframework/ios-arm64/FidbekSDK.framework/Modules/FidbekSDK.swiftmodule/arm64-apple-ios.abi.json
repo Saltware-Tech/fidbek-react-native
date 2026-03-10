@@ -953,28 +953,28 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/codex_build\/dd-ios-release\/Build\/Intermediates.noindex\/FidbekSDK.build\/Release-iphoneos\/FidbekSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/tmp\/fidbek-ios-build-0.3.5\/device\/Build\/Intermediates.noindex\/FidbekSDK.build\/Release-iphoneos\/FidbekSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
       "offset": 295,
       "length": 21,
       "value": "\"FidbekSDK_FidbekSDK\""
     },
     {
-      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/codex_build\/dd-ios-release\/Build\/Intermediates.noindex\/FidbekSDK.build\/Release-iphoneos\/FidbekSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/tmp\/fidbek-ios-build-0.3.5\/device\/Build\/Intermediates.noindex\/FidbekSDK.build\/Release-iphoneos\/FidbekSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "Array",
       "offset": 963,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/codex_build\/dd-ios-release\/Build\/Intermediates.noindex\/FidbekSDK.build\/Release-iphoneos\/FidbekSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/tmp\/fidbek-ios-build-0.3.5\/device\/Build\/Intermediates.noindex\/FidbekSDK.build\/Release-iphoneos\/FidbekSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
       "offset": 1490,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/codex_build\/dd-ios-release\/Build\/Intermediates.noindex\/FidbekSDK.build\/Release-iphoneos\/FidbekSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/tmp\/fidbek-ios-build-0.3.5\/device\/Build\/Intermediates.noindex\/FidbekSDK.build\/Release-iphoneos\/FidbekSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
       "offset": 1642,
       "length": 49,
@@ -1125,7 +1125,7 @@
       "kind": "StringLiteral",
       "offset": 116,
       "length": 7,
-      "value": "\"0.3.2\""
+      "value": "\"0.3.5\""
     },
     {
       "filePath": "\/Users\/talha\/Desktop\/Fidbek\/source-ios\/Sources\/FidbekSDK\/Internal\/Model\/FeedbackReportPayload.swift",

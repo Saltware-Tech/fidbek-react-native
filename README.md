@@ -121,7 +121,7 @@ npx react-native start --reset-cache
 
 ### Android crash: `NoClassDefFoundError androidx.viewbinding.ViewBinding`
 
-Use `@saltware/fidbek-react-native@0.3.2+` and clean build:
+Use `@saltware/fidbek-react-native@0.3.5+` and clean build:
 
 ```bash
 cd android
@@ -132,7 +132,7 @@ npx react-native run-android
 
 ### iOS build: `Multiple commands produce ... FidbekSDK-Swift.h`
 
-Use `@saltware/fidbek-react-native@0.3.3+` and reinstall pods:
+Use `@saltware/fidbek-react-native@0.3.5+` and reinstall pods:
 
 ```bash
 npm install @saltware/fidbek-react-native@latest
@@ -145,6 +145,13 @@ pod install
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.3.5
+
+- Updated bundled iOS XCFramework and resources to native Fidbek SDK `0.3.5`.
+- Includes the scripted native packaging pipeline and latest iOS binary rebuild.
+- Keeps the React Native iOS podspec source glob fix from `0.3.3`.
+- Android bundled native artifact remains on `0.3.0`.
 
 ### 0.3.3
 
