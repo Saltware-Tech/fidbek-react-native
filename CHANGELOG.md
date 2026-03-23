@@ -1,3 +1,9 @@
+## 0.3.7
+
+- Fixed Expo Android local Maven repository resolution to anchor the bundled Maven path to `rootProject`.
+- Resolves builds that still searched under `android/node_modules/...` after the `0.3.6` plugin change.
+- Existing Expo projects should regenerate native folders after upgrading with `npx expo prebuild --clean`.
+
 ## 0.3.6
 
 - Fixed Expo Android local Maven repository injection so development builds resolve bundled `com.fidbek:fidbek-android:0.3.0` correctly.

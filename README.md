@@ -77,7 +77,7 @@ Notes:
 
 - Expo Go is not supported (native binaries required)
 - The plugin configures the local Android Maven repository for Expo development builds
-- If upgrading from `0.3.5` or earlier, re-run `npx expo prebuild --clean`
+- If upgrading from `0.3.6` or earlier, re-run `npx expo prebuild --clean`
 
 ## Usage
 
@@ -133,7 +133,7 @@ npx react-native run-android
 
 ### Expo Android build: `Could not find com.fidbek:fidbek-android:0.3.0`
 
-Use `@saltware/fidbek-react-native@0.3.6+` and regenerate native folders:
+Use `@saltware/fidbek-react-native@0.3.7+` and regenerate native folders:
 
 ```bash
 npm install @saltware/fidbek-react-native@latest
@@ -156,6 +156,12 @@ pod install
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.3.7
+
+- Fixed Expo Android Maven repository resolution to use `rootProject.file(...)`.
+- Resolves cases where Gradle still searched `android/node_modules/...` for `com.fidbek:fidbek-android:0.3.0`.
+- Existing Expo native folders should be regenerated after upgrading.
 
 ### 0.3.6
 
