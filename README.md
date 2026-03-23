@@ -54,7 +54,7 @@ Notes:
 npm install @saltware/fidbek-react-native
 ```
 
-2. In `app.json`, enable New Architecture. Plugin is optional.
+2. In `app.json`, enable New Architecture and keep the plugin enabled.
 
 ```json
 {
@@ -76,7 +76,8 @@ npx expo run:android
 Notes:
 
 - Expo Go is not supported (native binaries required)
-- Plugin is currently a no-op; kept optional for forward compatibility
+- The plugin configures the local Android Maven repository for Expo development builds
+- If upgrading from `0.3.5` or earlier, re-run `npx expo prebuild --clean`
 
 ## Usage
 
@@ -130,6 +131,16 @@ cd ..
 npx react-native run-android
 ```
 
+### Expo Android build: `Could not find com.fidbek:fidbek-android:0.3.0`
+
+Use `@saltware/fidbek-react-native@0.3.6+` and regenerate native folders:
+
+```bash
+npm install @saltware/fidbek-react-native@latest
+npx expo prebuild --clean
+npx expo run:android
+```
+
 ### iOS build: `Multiple commands produce ... FidbekSDK-Swift.h`
 
 Use `@saltware/fidbek-react-native@0.3.5+` and reinstall pods:
@@ -145,6 +156,12 @@ pod install
 Call `open()` after app is foreground/resumed and after initial render cycle.
 
 ## Release Notes
+
+### 0.3.6
+
+- Fixed Expo Android local Maven repository injection for development builds.
+- Resolves `Could not find com.fidbek:fidbek-android:0.3.0` when the package is used through Expo prebuild.
+- Existing Expo native folders should be regenerated after upgrading.
 
 ### 0.3.5
 

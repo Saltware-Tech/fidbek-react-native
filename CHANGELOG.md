@@ -1,3 +1,9 @@
+## 0.3.6
+
+- Fixed Expo Android local Maven repository injection so development builds resolve bundled `com.fidbek:fidbek-android:0.3.0` correctly.
+- Existing Expo projects should regenerate native folders after upgrading with `npx expo prebuild --clean`.
+- No native binary change in this patch; bundled Android and iOS artifacts remain on `0.3.0` and `0.3.5`.
+
 ## 0.3.5
 
 - Updated bundled iOS XCFramework and resources to native Fidbek SDK `0.3.5`.
